@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Universe Hub</title>
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="./images/galaxy_1734167.png">
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/1c005ec541.js" crossorigin="anonymous"></script>
+    <!-- tailwind css -->
+    <link rel="stylesheet" href="./styles/output.css">
+</head>
+<body class="max-w-screen-2xl mx-auto">
+    <header>
+        <h1 class="mt-10 text-5xl font-bold text-center">AI Universe Hub</h1>
+    </header>
+    <main>
+        <div class="text-center mt-8">
+            <button class="feature-btn-primary" onclick="SortByDate()">Sort By Date</button>
+        </div>
+        <div class="text-center my-16 hidden" id="loading-spinner">
+            <span class="loading loading-spinner loading-lg text-indigo-700"></span>
+        </div>
+        <div class="mt-8 px-8 grid grid-cols-3 gap-5" id="features-container">
+
+        </div>
+        <div class="my-10 text-center">
+            <button class="feature-btn-primary hidden" id="see-more-button" onclick="seeMore()">See More</button>
+        </div>
+        <!-- Open the modal using ID.showModal() method -->
+        <dialog id="show_details_modal" class="modal modal-middle">
+            <div class="modal-box">
+                <div class="grid grid-cols-2 gap-10 p-10" id="details-body">
+
+                </div>
+                <div class="modal-action ">
+                    <form method="dialog" class="absolute top-[7%] left-[91%]">
+                        <!-- if there is a button in form, it will close the modal -->
+                        <button class="outline-none text-red-500 text-5xl"><i class="fa-solid fa-circle-xmark"></i></button>
+                    </form>
+                </div>
+            </div>
+        </dialog>
+    </main>
+    <script src="./js/fetures.js"></script>
+</body>
+</html>
